@@ -19,10 +19,13 @@ const DisplayList = () => {
     return (
         <Row>
             {items.map((item, idx) => {
+                console.log(item);
                 return (
+                    item &&(
                     <Col md className='m-1' key={idx}>
                         <AnimatedDisplayCard item={item} />
                     </Col>
+                    )
                 );
             })}
         </Row>
